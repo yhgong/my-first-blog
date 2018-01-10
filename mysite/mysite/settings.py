@@ -26,7 +26,7 @@ SECRET_KEY = 'u^q4ki*nry#%sby+zm7x4w5ib5ju@d+$9kl)k^6ha=)y*y5=zh'
 DEBUG = True
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'isricap.pythonanywhere.com']
 
 # Application definition
 
