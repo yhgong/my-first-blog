@@ -617,14 +617,32 @@ conda activate gatk
 ```
 micromamba install -y bioconda::bwa
 ```
+```
+bwa
+```
+
+![image](https://github.com/user-attachments/assets/76089755-0267-429f-af88-8d16d0f31749)
+
 ## 3. biopet-vcfstats 설치
 ```
 micromamba install -y bioconda::biopet-vcfstats
 ```
+```
+biopet-vcfstats
+```
+
+![image](https://github.com/user-attachments/assets/6cd4b92d-d4cf-4b95-b358-a8f0663f71a1)
+
 ## 4. vcftools 설치
 ```
 micromamba install -y bioconda::vcftools
 ```
+```
+vcftools
+```
+
+![image](https://github.com/user-attachments/assets/6b358e08-a66c-4561-9b91-041413c4efae)
+
 ## 5. Rust 설치
 
 ![image](https://github.com/user-attachments/assets/cc83dce7-692f-4624-a42d-7880b2274aa1)
@@ -633,6 +651,33 @@ micromamba install -y bioconda::vcftools
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 [Install Rust 공식 홈페이지](https://www.rust-lang.org/tools/install)
+
+파일 편집
+```
+vi hello.rs
+```
+```C
+fn main() {
+        println!("hello?");
+}
+```
+컴파일
+```
+rustc hello.rs
+```
+결과 파일 확인
+```
+ls -lrt
+```
+
+![image](https://github.com/user-attachments/assets/59b9dbf9-161e-49af-b772-b61eb6fb0248)
+
+hello 실행
+```
+./hello
+```
+
+![image](https://github.com/user-attachments/assets/dccad5c1-7baf-4a0d-affd-5f8db49110ec)
 
 ## 6. JAVA 실행 환경 변경
 
@@ -659,11 +704,10 @@ sudo alternatives --config java
 ![image](https://github.com/user-attachments/assets/085d8640-8550-4d1b-a634-4f4d97c98588)
 
 ## 7. bedtools 설치
+```
+micromamba install -y bioconda::bedtools
+```
 
-java 버전 확인
-```
-java -version
-```
 
 
 
