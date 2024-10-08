@@ -477,20 +477,11 @@ conda install -y bioconda::king
 ```
 ### 설치확인
 ```
-cd /opt/miniconda3/envs/gatk/bin
+king
 ```
 
-![image](https://github.com/user-attachments/assets/1a9d8a12-2f78-45fa-b35f-b1421711f5a5)
+![image](https://github.com/user-attachments/assets/46e7a5e8-7716-44ee-98e2-e1278de9775f)
 
-```
-pydoc
-```
-
-![image](https://github.com/user-attachments/assets/3a23d567-97f4-4e6c-9c4a-83fd06af3456)
-
-```
-cd
-```
 
 ## 16. libxml2-devel-cos6-x86_64 설치
 ```
