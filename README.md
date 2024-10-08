@@ -1043,7 +1043,8 @@ sed -i '92s/localhost/0.0.0.0/g' galaxy.yml
 sed -i '92s/#/ /g' galaxy.yml
 ```
 
-![image](https://github.com/user-attachments/assets/33ce4ab8-1997-42c7-88be-15f4481888e6)
+![image](https://github.com/user-attachments/assets/61b32fe5-85cb-4573-b908-7a847a9a929a)
+
 
 ## 5.galaxy.yml 파일 저장
 gunicorn : 웹 서버로 부터 받은 요청을 웹 어플리케이션에 전달해 주는 역할을 함.
