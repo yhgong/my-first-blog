@@ -260,10 +260,13 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 ## 12. GATK conda 설치
 (base) 환경에서 설치 <br>
-![image](https://github.com/user-attachments/assets/9727ac36-30a6-46a9-b0e1-4c101aa28775)
+
+![image](https://github.com/user-attachments/assets/aa19b3ac-7c32-4bc7-b8b7-a04302e1ec24)
+
 ```
 conda create -y -n gatk
 ```
+
 ![image](https://github.com/user-attachments/assets/aa3d417c-ed92-44cc-b28b-8c22791b7592)
 
 gatk 가상환경으로 진입
@@ -278,10 +281,7 @@ conda install -y ipykernel
 ```
 # ◼︎ conda gatk 환경에 각종 툴 설치
 ## install bwa, vcfstats, vcftools, bedtools, fastqc, somalier, slivar, salmon, s5cmd, plink, plink2, multiqc, minimap2, htslib, king, libxml2-devel-cos6-x86_64, gistic2 설치
-## 1. GATK 가상환경 진입
-```
-conda activate gatk
-```
+
 ## 1. 10x_bamtofastq 설치
 ```
 conda install -y bioconda::10x_bamtofastq
