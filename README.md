@@ -276,36 +276,58 @@ conda activate gatk
 ```
 conda install -y ipykernel
 ```
-주피터랩 연동 확인
-1. (base) 환경에서 주피터랩 실행   
-2. gatk 가상환경 아이콘 확인 <br>
-![image](https://github.com/user-attachments/assets/5a6735dc-59d0-479a-85f7-94e3243c7fa3)
-3. gatk3 명령어 실행 확인 주피터랩에서 외부명령 실행시 명령어 앞에 "느낌표" + 실행하고자하는 명령어 ! <br>
-```
-!gatk3
-```
-![image](https://github.com/user-attachments/assets/bd1e779c-fb6e-4703-81dd-46dcae34711b)
-
 # ◼︎ conda gatk 환경에 각종 툴 설치
 ## install bwa, vcfstats, vcftools, bedtools, fastqc, somalier, slivar, salmon, s5cmd, plink, plink2, multiqc, minimap2, htslib, king, libxml2-devel-cos6-x86_64, gistic2 설치
 ## 1. GATK 가상환경 진입
 ```
 conda activate gatk
 ```
-## 2. bwa 설치
+## 1. 10x_bamtofastq 설치
 ```
-micromamba install -y bioconda::bwa
+conda install -y bioconda::10x_bamtofastq
 ```
+### 설치확인
+```
+bamtofastq
+```
+
+![image](https://github.com/user-attachments/assets/f228174d-4928-4cfc-993b-ce432fde42db)
+
+## 2. ctat-mutations 설치
+```
+conda install -y bioconda::ctat-mutations
+```
+주피터랩 연동 확인
+1. (base) 환경에서 주피터랩 실행   
+2. gatk 가상환경 아이콘 확인 <br>
+
+![image](https://github.com/user-attachments/assets/5a6735dc-59d0-479a-85f7-94e3243c7fa3)
+
+3. gatk 명령어 실행 확인 - 주피터랩에서 외부명령 실행시 명령어 앞에 "느낌표" + 실행하고자하는 명령어 ! <br>
+```
+!gatk
+```
+![image](https://github.com/user-attachments/assets/8341da54-b8e5-408a-9e00-48d6cb7834ab)
+
+
+## 3. bwa 설치
+```
+conda install -y bioconda::bwa
+```
+### 설치확인
 ```
 bwa
 ```
 
-![image](https://github.com/user-attachments/assets/76089755-0267-429f-af88-8d16d0f31749)
+![image](https://github.com/user-attachments/assets/383380de-de05-4561-832b-2b39f441d883)
+
 
 ## 3. biopet-vcfstats 설치
 ```
-micromamba install -y bioconda::biopet-vcfstats
+conda install -y bioconda::biopet-vcfstats
 ```
+
+### 설치확인
 ```
 biopet-vcfstats
 ```
@@ -316,13 +338,192 @@ biopet-vcfstats
 ```
 micromamba install -y bioconda::vcftools
 ```
+### 설치확인
 ```
 vcftools
 ```
 
 ![image](https://github.com/user-attachments/assets/6b358e08-a66c-4561-9b91-041413c4efae)
 
-## 5. Rust 설치
+## 5. bedtools 설치
+```
+conda install -y bioconda::bedtools
+```
+### 설치확인
+```
+bedtools
+```
+
+![image](https://github.com/user-attachments/assets/02536580-5059-4c78-ac5b-6615c66fa89b)
+
+## 6. fastqc 설치
+```
+conda install -y bioconda::fastqc
+```
+### 설치확인
+```
+fastqc
+```
+
+![image](https://github.com/user-attachments/assets/22305c63-c670-47e7-b0ad-0826ce2b6ff4)
+
+
+## 7. somalier 설치
+```
+conda install -y bioconda::somalier
+```
+### 설치확인
+```
+somalier
+```
+
+![image](https://github.com/user-attachments/assets/17196aa4-9877-45c6-9f9f-ef0abb7c5ed0)
+
+## 8. slivar 설치
+```
+conda install -y bioconda::slivar
+```
+### 설치확인
+```
+slivar
+```
+
+![image](https://github.com/user-attachments/assets/52b4f9a4-62e8-4e1e-9341-20aa1e156f2a)
+
+## 9. salmon 설치
+```
+conda install -y salmon
+```
+### 설치확인
+```
+salmon
+```
+
+![image](https://github.com/user-attachments/assets/d4ff2913-27fe-426c-a7b9-51e84e94e34c)
+
+## 10. s5cmd 설치
+```
+conda install -y conda-forge::s5cmd
+```
+### 설치확인
+```
+s5cmd
+```
+
+![image](https://github.com/user-attachments/assets/42204e82-af72-4a25-a0a4-7ca76d47cfb4)
+
+## 11. plink 설치
+```
+conda install -y bioconda::plink
+```
+### 설치확인
+```
+plink
+```
+
+![image](https://github.com/user-attachments/assets/58d32fd9-becc-45ee-a18c-f93396b18543)
+
+## 12. plink2 설치
+```
+conda install -y bioconda::plink2
+```
+### 설치확인
+```
+plink2
+```
+
+![image](https://github.com/user-attachments/assets/432dc555-12a9-4e8c-a76f-6d848586b813)
+
+## 13. multiqc 설치
+```
+conda install -y bioconda::multiqc
+```
+### 설치확인
+```
+cd /opt/miniconda3/envs/gatk/bin
+```
+
+![image](https://github.com/user-attachments/assets/43fbc731-d747-45e8-8059-7eb56c48c713)
+
+```
+cd
+```
+
+## 14. minimap2 설치
+```
+conda install -y bioconda::minimap2
+```
+### 설치확인
+```
+minimap2
+```
+
+![image](https://github.com/user-attachments/assets/2f7763bb-ffe1-43e3-a36a-f7e73a009d1a)
+
+
+## 15. king 설치
+```
+conda install -y bioconda::king
+```
+### 설치확인
+```
+cd /opt/miniconda3/envs/gatk/bin
+```
+
+![image](https://github.com/user-attachments/assets/1a9d8a12-2f78-45fa-b35f-b1421711f5a5)
+
+```
+pydoc
+```
+
+![image](https://github.com/user-attachments/assets/3a23d567-97f4-4e6c-9c4a-83fd06af3456)
+
+```
+cd
+```
+
+## 16. libxml2-devel-cos6-x86_64 설치
+```
+conda install -y conda-forge::libxml2-devel-cos6-x86_64
+```
+### 설치확인
+```
+k8
+```
+
+![image](https://github.com/user-attachments/assets/e71f64c4-8e33-4498-a553-0a50c8bb99fb)
+
+## 17. gistic2 설치
+```
+conda install -y hcc::gistic2
+```
+### 설치확인 (설치 오류 발생)
+```
+gistic2
+```
+
+## 18. bioconductor-mafdb.gnomadex.r2.1.hs37d5 설치
+```
+conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.hs37d5
+```
+### 설치확인
+```
+yq
+```
+
+![image](https://github.com/user-attachments/assets/b83299a6-931a-415d-999f-7bc83edf0c90)
+
+
+## 19. bioconductor-mafdb.gnomadex.r2.1.grch38 설치
+```
+conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.grch38
+```
+### 설치확인
+```
+
+```
+
+## 20. Rust 설치
 
 ![image](https://github.com/user-attachments/assets/cc83dce7-692f-4624-a42d-7880b2274aa1)
 
