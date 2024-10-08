@@ -714,9 +714,19 @@ cd bin
 echo 'export PATH=$PATH:/home/rocky/triodenovo.0.06/bin' >> ~/.bashrc
 ```
 ## 14.쉘 재기동
+### 홈디렉토리 이동
 ```
-source ~/.bachrc
+cd
 ```
+### 쉘 반영
+```
+source ~/.bashrc
+```
+### 프로그램 실행 확인
+```
+triodenovo
+```
+
 
 <br>
 
