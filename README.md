@@ -880,10 +880,9 @@ sudo passwd rocky
 
 ![image](https://github.com/user-attachments/assets/d133a5a7-8c0c-4107-aedf-fc93a5fc4d4b)
 
-
-## 6. 서비스 포트 확인
+## 6. 서버 리부팅
 ```
-sudo netstat -nltp
+sudo reboot
 ```
 
 ## 7. 서비스 접속
@@ -1038,7 +1037,10 @@ cp galaxy.yml.sample galaxy.yml
 
 ## 4.galaxy.yml 파일 수정
 ```
-vi galaxy.yml
+sed -i '92s/localhost/0.0.0.0/g' galaxy.yml
+```
+```
+sed -i '92s/#/ /g' galaxy.yml
 ```
 
 ![image](https://github.com/user-attachments/assets/33ce4ab8-1997-42c7-88be-15f4481888e6)
@@ -1059,6 +1061,9 @@ sh run.sh
 ```
 
 ## 8. 0.0.0.0:8080 으로 서비스가 실행 되었는지 확인
+```
+sudo netstat -nltp
+```
 
 ![image](https://github.com/user-attachments/assets/66ac0e5b-57d9-4c94-a940-fc0a9cd1656e)
 
