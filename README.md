@@ -64,7 +64,7 @@
 
 <br>
 
-# ◼︎ 주피터랩 설치 및 conda GATK3 연동
+# ◼︎ 주피터랩 설치 및 conda GATK 연동
 
 ## 1. System Update
 패키지 업그레이드를 강제로 실행하면서 기존 의존성 문제를 무시하고 최신 버전으로 업데이트하는 옵션입니다.
@@ -192,14 +192,23 @@ sudo rm -rf /opt/miniconda3/miniconda.sh
 ```
 쉘을 빠져나왔다가 다시 들어가면 설치된 콘다 (base)환경으로 접속됩니다.
 
-
-## 6. micromamba 설치
+## 6. 콘다 채널 추가
+채널 default, bioconda, conda-forge
 ```
-"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
 ```
-![image](https://github.com/user-attachments/assets/6d0c1b46-d96f-4ef8-bfb0-102462fe52f9)
 
-base 콘다 환경에 micromamba 환경을 설치 합니다.
+등록 채널 확인
+```
+conda config --show channels
+```
+
+채널 우선 순위 변경
+```
+conda config --set channel_priority strict
+```
 
 ## 7. jupyterlab 설치
 ```
@@ -245,7 +254,7 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
      
 ![image](https://github.com/user-attachments/assets/f4ae0f8b-155a-40b7-bef4-58b9e19a5835)
 
-## 11.포트에 대한 개념과 방화벽에 대하 개념 설명 PPT로 설명
+## 11.포트에 대한 개념과 방화벽에 대하 개념 --> PPT 장표 참고
 
 ![image](https://github.com/user-attachments/assets/ece4e3f6-e754-4edb-bc19-712c788a883e)
 
@@ -253,7 +262,7 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 (base) 환경에서 설치 <br>
 ![image](https://github.com/user-attachments/assets/9727ac36-30a6-46a9-b0e1-4c101aa28775)
 ```
-conda create -y -n gatk python=2.7
+conda create -y -n gatk
 ```
 ![image](https://github.com/user-attachments/assets/aa3d417c-ed92-44cc-b28b-8c22791b7592)
 
@@ -262,16 +271,6 @@ gatk 가상환경으로 진입
 conda activate gatk
 ```
 ![image](https://github.com/user-attachments/assets/9eeb679b-6b13-4de0-8082-d79e838309cb)
-
-gatk 모듈 설치
-```
-conda install -y bioconda::gatk
-```
-정상 설치 확인!!!
-```
-gatk3
-```
-![image](https://github.com/user-attachments/assets/3668a0d8-1fc8-4049-ba11-3d983aa70121)
 
 주피터랩과 gatk 환경 연동
 ```
