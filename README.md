@@ -798,6 +798,14 @@ cd
 ```
 echo 'export PATH=$PATH:/home/rocky/AdmixTools-7.0.2/bin' >> ~/.bashrc
 ```
+### 쉘 반영
+```
+source ~/.bashrc
+```
+### 프로그램 실행 확인
+```
+dof4
+```
 
 <br>
 
