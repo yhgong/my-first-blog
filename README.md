@@ -279,6 +279,16 @@ conda activate gatk
 ```
 conda install -y ipykernel
 ```
+
+채널 우선 순위 변경
+```
+conda config --set channel_priority flexible
+```
+flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 선택됩니다. 이 모드는 안정적인 패키지보다는 최신 버전의 패키지를 선호하는 경우에 유용합니다.
+
+•	strict: 공식 채널의 패키지를 우선적으로 선택합니다.
+•	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
+•	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
 # ◼︎ conda gatk 환경에 각종 툴 설치
 ## install bwa, vcfstats, vcftools, bedtools, fastqc, somalier, slivar, salmon, s5cmd, plink, plink2, multiqc, minimap2, htslib, king, libxml2-devel-cos6-x86_64, gistic2 설치
 
@@ -497,10 +507,21 @@ k8
 ```
 conda install -y hcc::gistic2
 ```
-### 설치확인 (설치 오류 발생)
+### 설치확인
 ```
 gistic2
 ```
+### 라이브러리 없다는 오류 나오면 아래 명령 실행
+
+![image](https://github.com/user-attachments/assets/fdcf6247-dd06-4e76-a1ca-96747c4eae66)
+
+```
+sudo ln -s /usr/lib64/libncursesw.so.6.2 /usr/lib64/libncurses.so.5
+sudo ln -s /usr/lib64/libncursesw.so.6.2 /usr/lib64/libtinfo.so.5
+sudo ln -s /usr/lib64/libform.so.6.2 /usr/lib64/libform.so.5
+```
+
+
 
 ## 18. bioconductor-mafdb.gnomadex.r2.1.hs37d5 설치
 ```
