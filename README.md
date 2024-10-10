@@ -145,9 +145,9 @@ sudo dnf -y update
 ```
 
 ## 2. System Extension Install
-wget, git-lfs net-tools 설치
+wget, git-lfs net-tools traceroute 설치
 ```
-sudo dnf -y install wget git-lfs net-tools
+sudo dnf -y install wget git-lfs net-tools traceroute
 ```
 <br>
 
@@ -237,10 +237,16 @@ conda install -y jupyter_bokeh
 
 ## 9. 아나콘다와 주피터랩의 가상환경을 연결해 주는 nb_conda_kernel 설치
 ```
-conda install nb_conda_kernels
+conda install -y nb_conda_kernels
 ```
-아래처럼 나오면 정상 설치!!!
+### 아래처럼 나오면 정상 설치!!!
 ![image](https://github.com/user-attachments/assets/1d479fad-257b-480e-a039-b09d0ce347bb)
+
+### 편리한 주피터 노트북 사용
+1. 편리한 주피터 노트북 사용
+  - conda 환경을 쉽게 선택하고 전환할 수 있어 주피터 노트북을 더욱 편리하게 사용할 수 있습니다. 
+2. 에러 해결
+  - DLL 임포트 에러 등의 문제를 해결할 수 있습니다.
 
 ## 10. 주피터랩 실행 확인
 ```
@@ -254,7 +260,7 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
      
 ![image](https://github.com/user-attachments/assets/f4ae0f8b-155a-40b7-bef4-58b9e19a5835)
 
-## 11.포트에 대한 개념과 방화벽에 대하 개념 --> PPT 장표 참고
+## 11.포트에 대한 개념과 방화벽에 대한 개념
 
 ![image](https://github.com/user-attachments/assets/ece4e3f6-e754-4edb-bc19-712c788a883e)
 
@@ -263,24 +269,25 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 ![image](https://github.com/user-attachments/assets/aa19b3ac-7c32-4bc7-b8b7-a04302e1ec24)
 
+### gatk 가상환경 생성
 ```
 conda create -y -n gatk
 ```
 
 ![image](https://github.com/user-attachments/assets/aa3d417c-ed92-44cc-b28b-8c22791b7592)
 
-gatk 가상환경으로 진입
+### gatk 가상환경으로 진입
 ```
 conda activate gatk
 ```
 ![image](https://github.com/user-attachments/assets/9eeb679b-6b13-4de0-8082-d79e838309cb)
 
-주피터랩과 gatk 환경 연동
+### python version 확인
 ```
-conda install -y ipykernel
+python -V
 ```
 
-채널 우선 순위 변경
+### 채널 우선 순위 변경
 ```
 conda config --set channel_priority flexible
 ```
@@ -305,7 +312,7 @@ bamtofastq
 
 ## 2. ctat-mutations 설치
 ```
-conda install -y bioconda::ctat-mutations
+conda install bioconda::ctat-mutations
 ```
 주피터랩 연동 확인
 1. (base) 환경에서 주피터랩 실행   
@@ -346,7 +353,7 @@ biopet-vcfstats
 
 ## 4. vcftools 설치
 ```
-micromamba install -y bioconda::vcftools
+conda install -y bioconda::vcftools
 ```
 ### 설치확인
 ```
@@ -444,7 +451,7 @@ plink2
 
 ![image](https://github.com/user-attachments/assets/432dc555-12a9-4e8c-a76f-6d848586b813)
 
-## 13. multiqc 설치
+## 13. multiqc 설치 ★
 ```
 conda install -y bioconda::multiqc
 ```
@@ -494,7 +501,7 @@ k8
 
 ![image](https://github.com/user-attachments/assets/e71f64c4-8e33-4498-a553-0a50c8bb99fb)
 
-## 17. gistic2 설치
+## 17. gistic2 설치 ★
 ```
 conda install -y hcc::gistic2
 ```
@@ -514,13 +521,13 @@ sudo ln -s /usr/lib64/libform.so.6.2 /usr/lib64/libform.so.5
 
 
 
-## 18. bioconductor-mafdb.gnomadex.r2.1.hs37d5 설치
+## 18. bioconductor-mafdb.gnomadex.r2.1.hs37d5 설치 ★
 ```
 conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.hs37d5
 ```
 ### 설치확인
 ```
-yq
+
 ```
 
 ![image](https://github.com/user-attachments/assets/b83299a6-931a-415d-999f-7bc83edf0c90)
@@ -532,14 +539,14 @@ conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.grch38
 ```
 ### 설치확인
 ```
-
+yq
 ```
 
 ## 20.Rust 설치
 
 ![image](https://github.com/user-attachments/assets/cc83dce7-692f-4624-a42d-7880b2274aa1)
 
-### 공식 홈페이지에 있는 설치 명령어
+### 공식 홈페이지에 있는 설치 명령어 ★
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -584,7 +591,7 @@ pip install rtoml
 ![image](https://github.com/user-attachments/assets/60cffd81-03c4-43d1-840c-b8f733ed0fd3)
 
 
-## 22. vcfstats 설치
+## 22. vcfstats 설치 ★
 ```
 pip install -U vcfstats
 ```
@@ -617,6 +624,132 @@ sudo ln -s /usr/bin/java /opt/miniconda3/envs/gatk/bin/java
 sudo alternatives --config java
 ```
 ![image](https://github.com/user-attachments/assets/085d8640-8550-4d1b-a634-4f4d97c98588)
+
+## 24. 주피터랩과 gatk 환경 연동
+```
+conda install anaconda::ipykernel
+```
+
+## 25. 가상환경 빠져나오기
+```
+conda deactivate
+```
+
+
+# ◼︎ manta conda 설치
+## 1. manta 가상환경 생성
+```
+conda create -y -n manta python=2.7
+```
+## 2. manta 가상환경 진입
+```
+conda activate manta
+```
+## 3. 파이썬 버전 2.7 확인
+```
+python -V
+```
+## 4. manta 설치
+```
+conda install -y bioconda::manta
+```
+## 5. strelka 설치
+```
+conda install -y bioconda::strelka
+```
+## 6. 주피터랩과 gatk 환경 연동
+```
+conda install anaconda::ipykernel
+```
+## 7. pip 재설치
+```
+pip 
+```
+![image](https://github.com/user-attachments/assets/fb98af70-ada3-4c57-9fee-cf1a401a9ff2)
+
+위와 같이 에러 발생하면...
+
+### pip 2.7용 소스 가져오기
+```
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+```
+### pip 재설치
+```
+python get-pip.py
+```
+
+![image](https://github.com/user-attachments/assets/ac5933c9-54d7-4615-8b48-850146085104)
+
+### pip 실행확인
+```
+pip -V
+```
+
+![image](https://github.com/user-attachments/assets/51aee903-c4d3-4f87-b231-5bb406f86706)
+
+## 8. 가상환경 빠져나오기
+```
+conda deactivate
+```
+
+
+# ◼︎ hail conda 설치
+## 1. hail 가상환경 생성
+```
+conda create -y -n hail python=3.10
+```
+## 2. manta 가상환경 진입
+```
+conda activate hail
+```
+## 3. 파이썬 버전 2.7 확인
+```
+python -V
+```
+## 4. hail 설치
+```
+pip install hail
+```
+## 5. colabfold 설치
+```
+conda install -y bioconda::colabfold
+```
+## 6. crossmap 설치
+```
+conda install -y bioconda::crossmap
+```
+## 7. deeptools 설치
+```
+conda install -y bioconda::deeptools
+```
+## 8. harfbuzz 설치
+```
+conda install -y conda-forge::harfbuzz
+```
+## 9. liftover 설치
+```
+conda install -y bioconda::liftover
+```
+## 10. postgresql-devel 설치
+```
+sudo dnf install -y postgresql-devel
+```
+## 11. psycopg2 설치
+```
+pip install psycopg2
+```
+## 12. gnomad 설치
+```
+pip install gnomad
+```
+## 13. 주피터랩과 gatk 환경 연동
+```
+conda install anaconda::ipykernel
+```
+### 연동 확인
+![image](https://github.com/user-attachments/assets/c4fe0fcc-3f13-419f-943b-d73ff7839a6a)
+
+
 
 
 
@@ -853,26 +986,26 @@ sudo netstat -nltp
 
 ## 5. SELinux 설정 및 rocky 비밀번호 생성
 
-디렉토리 이동
+### 디렉토리 이동
 ```
 cd /etc/selinux
 ```
 
-config 파일 수정
+### config 파일 수정
 ```
 sudo sed -i '22s/SELINUX=enforcing/SELINUX=disabled/g' config
 ```
 SELinux 를 해제후 다시 켤 경우 relabel이 필요하며 이때 잘못된 설정이 있을 경우 부팅이 안 되거나 ssh 로 원격 접속이 불가능할 수 있으므로 **enforcing** 모드가 아닌 **permissive** 모드로 설정 후 재부팅하는 것을 권장
 
 
-파일 수정 확인
+### 파일 수정 확인
 ```
 cat config
 ```
 ![image](https://github.com/user-attachments/assets/673ecf76-eace-4186-9e5d-7d23c68c4c4a)
 
 
-rocky 계정 비밀 번호 생성
+### rocky 계정 비밀 번호 생성
 ```
 sudo passwd rocky
 ```
