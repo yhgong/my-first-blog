@@ -586,9 +586,6 @@ ls -lrt
 pip install rtoml
 ```
 
-![image](https://github.com/user-attachments/assets/60cffd81-03c4-43d1-840c-b8f733ed0fd3)
-
-
 ## 22. vcfstats 설치 ★
 ```
 pip install -U vcfstats
@@ -691,6 +688,11 @@ conda deactivate
 ```
 
 
+
+
+
+
+
 # ◼︎ hail conda 설치
 ## 1. hail 가상환경 생성
 ```
@@ -749,9 +751,28 @@ conda install anaconda::ipykernel
 
 
 
+# ◼︎ annotsv conda 설치
+## 1. annotsv 가상환경 생성
+```
+conda create -y -n annotsv
+```
+## 2. annotsv 가상환경 진입
+```
+conda activate annotsv
+```
+## 3. 파이썬 버전 2.7 확인
+```
+python -V
+```
+## 4. annotsv 설치
+```
+conda install -y bioconda::annotsv
+```
+## 5. 주피터랩과 gatk 환경 연동
+```
+conda install anaconda::ipykernel
+```
 
-
-<br>
 
 # ◼︎ Triodenovo 설치
 
@@ -857,6 +878,10 @@ source ~/.bashrc
 ```
 triodenovo
 ```
+
+
+
+
 
 
 <br>
