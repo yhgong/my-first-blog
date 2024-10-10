@@ -519,8 +519,6 @@ sudo ln -s /usr/lib64/libncursesw.so.6.2 /usr/lib64/libtinfo.so.5
 sudo ln -s /usr/lib64/libform.so.6.2 /usr/lib64/libform.so.5
 ```
 
-
-
 ## 18. bioconductor-mafdb.gnomadex.r2.1.hs37d5 설치 ★
 ```
 conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.hs37d5
@@ -1149,7 +1147,7 @@ git fetch origin && git checkout release_24.1 && git pull --ff-only origin relea
 sh run.sh
 ```
 
-# 외부에서 galaxy 접속을 위한 설정
+# ◼︎ 외부에서 galaxy 접속을 위한 설정
 최초에 galaxy를 설치하면 내부에서만 접속이 가능한 상태로 실행이 됩니다.
 
 ![image](https://github.com/user-attachments/assets/1416d4e5-38bd-4872-923e-4d4aff207792)
