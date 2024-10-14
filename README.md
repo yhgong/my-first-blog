@@ -751,6 +751,79 @@ conda install anaconda::ipykernel
 ![image](https://github.com/user-attachments/assets/c4fe0fcc-3f13-419f-943b-d73ff7839a6a)
 
 
+<br>
+<br>
+<br>
+<br>
+
+
+
+# ◼︎ DeNovoCNN 설치
+## 1. 디렉토리 홈으로 이동
+```
+cd
+```
+## 2. git에서 소스 가져오기
+```
+git clone https://github.com/Genome-Bioinformatics-RadboudUMC/DeNovoCNN.git
+```
+## 3. 디렉토리 이동
+```
+cd ./DeNovoCNN
+```
+## 4. 채널 우선순위 변경
+```
+conda config --set channel_priority flexible
+```
+flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 선택됩니다. 
+
+이 모드는 안정적인 패키지보다는 최신 버전의 패키지를 선호하는 경우에 유용합니다.
+
+•	strict: 공식 채널의 패키지를 우선적으로 선택합니다.
+•	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
+•	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
+
+## 5. yml파일을 이용한 콘다 가상환경 생성 및 패키지 설치
+```
+conda env create -f environment.yml
+```
+
+![image](https://github.com/user-attachments/assets/9d4ad80c-d1a9-4d35-be09-89a46a095e17)
+
+## 6. 가상환경으로 진입
+```
+conda activate tensorflow_env
+```
+
+## 7. ipykernel 설치
+```
+conda install anaconda::ipykernel
+```
+
+## 8. 주피터랩 확인
+
+![image](https://github.com/user-attachments/assets/5f3f14e2-60ce-46e0-b1e0-50f0a2071dc2)
+
+![image](https://github.com/user-attachments/assets/77680e65-9e2b-46cc-a0d7-61d2adc27371)
+
+- Collecting asttokens==2.0.5
+- Collecting backcall==0.2.0
+- Collecting decorator==5.1.1
+- Collecting executing==0.8.3
+  
+..
+
+..
+
+..
+
+
+<br>
+<br>
+<br>
+<br>
+
+
 
 # ◼︎ annotsv conda 설치
 ## 1. annotsv 가상환경 생성
@@ -778,11 +851,14 @@ conda install anaconda::ipykernel
 conda deactivate
 ```
 
-
+<br>
+<br>
+<br>
+<br>
 
 # ◼︎ Triodenovo 설치
 
-## 1. 설치 위치
+## 1. 홈 디렉토리 이동
 ```
 cd
 ```
@@ -885,10 +961,61 @@ source ~/.bashrc
 triodenovo
 ```
 
+<br>
+<br>
+<br>
+<br>
 
 
 
+# ◼︎ dSQ 설치
 
+## 1. 홈디렉토리 이동
+```
+cd
+```
+## 2. git에서 내려받기
+```
+git clone https://github.com/ycrc/dSQ.git
+```
+
+<br>
+<br>
+<br>
+<br>
+
+
+# ◼︎ eigensoft 설치
+
+## 1. 홈디렉토리 이동
+```
+cd
+```
+## 2. git에서 내려받기
+```
+git clone https://github.com/argriffing/eigensoft.git
+```
+## 3. 압축파일 해제
+```
+unzip v7.0.2.zip
+```
+## 4. 디렉토리 이동
+```
+cd eigensoft/src
+```
+## 5. make
+```
+make eigenstrat
+```
+## 6. 실행파일 이동
+```
+mv eigenstrat ../bin
+```
+
+<br>
+<br>
+<br>
+<br>
 
 
 
@@ -969,10 +1096,11 @@ source ~/.bashrc
 dof4
 ```
 
-
-
-
 <br>
+<br>
+<br>
+<br>
+
 
 # ◼︎ conda R 설치
 
@@ -1023,77 +1151,6 @@ available.packages()
 <br>
 <br>
 <br>
-
-
-
-
-
-
-# ◼︎ DeNovoCNN 설치
-## 1. 디렉토리 홈으로 이동
-```
-cd
-```
-## 2. git에서 소스 가져오기
-```
-git clone https://github.com/Genome-Bioinformatics-RadboudUMC/DeNovoCNN.git
-```
-## 3. 디렉토리 이동
-```
-cd ./DeNovoCNN
-```
-## 4. 채널 우선순위 변경
-```
-conda config --set channel_priority flexible
-```
-flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 선택됩니다. 
-
-이 모드는 안정적인 패키지보다는 최신 버전의 패키지를 선호하는 경우에 유용합니다.
-
-•	strict: 공식 채널의 패키지를 우선적으로 선택합니다.
-•	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
-•	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
-
-## 5. yml파일을 이용한 콘다 가상환경 생성 및 패키지 설치
-```
-conda env create -f environment.yml
-```
-
-![image](https://github.com/user-attachments/assets/9d4ad80c-d1a9-4d35-be09-89a46a095e17)
-
-## 6. 가상환경으로 진입
-```
-conda activate tensorflow_env
-```
-
-## 7. ipykernel 설치
-```
-conda install anaconda::ipykernel
-```
-
-## 8. 주피터랩 확인
-
-![image](https://github.com/user-attachments/assets/5f3f14e2-60ce-46e0-b1e0-50f0a2071dc2)
-
-![image](https://github.com/user-attachments/assets/77680e65-9e2b-46cc-a0d7-61d2adc27371)
-
-- Collecting asttokens==2.0.5
-- Collecting backcall==0.2.0
-- Collecting decorator==5.1.1
-- Collecting executing==0.8.3
-  
-..
-
-..
-
-..
-
-
-<br>
-<br>
-<br>
-<br>
-
 
 
 
@@ -1277,6 +1334,11 @@ echo '. "${HOME}/.icav2-cli-plugins/source.sh"' | tee -a .bashrc
 source ~/.bashrc
 ```
 
+<br>
+<br>
+<br>
+<br>
+
 
 # ◼︎ conda docker 설치
 
@@ -1300,7 +1362,10 @@ conda install -y conda-forge::docker-py
 sudo dnf install -y docker
 ```
 
-
+<br>
+<br>
+<br>
+<br>
 
 
 
@@ -1395,6 +1460,12 @@ sudo netstat -nltp
 크롬등의 브라우저 창을 열고 주소란에 입력 http://210.109.54.95:8080
 
 ![image](https://github.com/user-attachments/assets/0e6c827a-337d-4432-bdc4-b01ea62e8490)
+
+
+<br>
+<br>
+<br>
+<br>
 
 
 # ◼︎ Only GATK 설치 및 실행
