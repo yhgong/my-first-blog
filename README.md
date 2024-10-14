@@ -6,26 +6,25 @@
 ![image](https://github.com/user-attachments/assets/5623ee90-d57c-4e40-ba9a-4c9cfdac8b2a)
 
 ## 3. 인스턴스 생성
-#### 1. 인스턴스 생성 버튼 클릭
+### 1. 인스턴스 생성 버튼 클릭
 ![image](https://github.com/user-attachments/assets/ee570e6b-9045-4844-b6ef-cd53e0ca5587)
 --
-#### 2. 서버명 입력 : lab-svr
+### 2. 서버명 입력 : lab-svr
 ![image](https://github.com/user-attachments/assets/2c4f6e72-b282-4686-b5f1-4eb32f39add0)
 ---
-#### 3. 이미지 선택 : Rocky_linux 9.4
+### 3. 이미지 선택 : Rocky_linux 9.4
 ![image](https://github.com/user-attachments/assets/deb41818-e72e-460a-82d0-5f8fc5cf7806)
 ---
-#### 4. 인스턴스 유형 : 컴퓨팅 최적화 , c2a.xlarge
-![image](https://github.com/user-attachments/assets/fcfbf0e7-cbce-4748-a8c4-6dfeebd49693)
+### 4. 인스턴스 유형 : 컴퓨팅 최적화 , c2a.large
+![image](https://github.com/user-attachments/assets/5be7d27a-ce08-4625-9b3a-46e36852d627)
 ---
-#### 5. 루트 볼륨 : 100GB
-
-![image](https://github.com/user-attachments/assets/8a707b8d-6a65-47b5-870f-7433f396c03c)
+### 5. 루트 볼륨 : 50GB
+![image](https://github.com/user-attachments/assets/576700b7-2eec-4ddb-a294-d61280400dc1)
 ---
-#### 6. 키페어 : 앞 시간에 생성한 키페어 선택
+### 6. 키페어 : 앞 시간에 생성한 키페어 선택
 ![image](https://github.com/user-attachments/assets/3a7aeaf6-0d93-45a4-8dfc-34b11df5b2d3)
 ---
-#### 7. 네트워크
+### 7. 네트워크
 
 ![image](https://github.com/user-attachments/assets/abeb2c6a-0197-49b1-80e4-35bfbe47f8e2)
 
@@ -35,30 +34,29 @@
   - 출발지 : www.naver.com 에서 "내 아이피 주소 확인" 으로 확인
   ![image](https://github.com/user-attachments/assets/9850df61-c501-4cc6-95ea-f9df88af79da)
 
-
-![image](https://github.com/user-attachments/assets/d340f3d1-9c52-42ac-9c93-4ad8d4042742)
+![image](https://github.com/user-attachments/assets/e31f4ae3-5abf-440e-97c0-1118fe039bfa)
 ![image](https://github.com/user-attachments/assets/aeccbbe0-bd7b-4de2-bb2b-eb7f259750a1)
 ---
-#### 8. 생성 버튼 클릭
+### 8. 생성 버튼 클릭
 
 ![image](https://github.com/user-attachments/assets/fd9d16e7-7480-4992-99b3-24fa6880c41e)
 ---
-#### 9. 공인 IP 생성 : VPC -> 퍼블릭 IP 선택
+## 4. 공인 IP 생성 : VPC -> 퍼블릭 IP 선택
 ![image](https://github.com/user-attachments/assets/34b712ca-bd77-4434-8bd8-76781d1f1bf9)
 ---
-#### 10. "+ 퍼블릭 IP 생성" 클릭
+#### "+ 퍼블릭 IP 생성" 클릭
 
 ![image](https://github.com/user-attachments/assets/9686dcec-ac50-499c-a9a3-311bc2772181)
 ---
-#### 11. 퍼블릭 IP 설명에 내용 입력(옵션)후  "생성" 버튼 클릭
+#### 퍼블릭 IP 설명에 내용 입력(옵션)후  "생성" 버튼 클릭
 ![image](https://github.com/user-attachments/assets/e7ff0c5d-00d0-4ac0-b997-eaffe9ee5e9a)
 ---
 
-#### 12. 퍼블릭 IP 서버 연결 : 리소스 연결 선택
+#### 퍼블릭 IP 서버 연결 : 리소스 연결 선택
 ![image](https://github.com/user-attachments/assets/c311e2e6-5f04-4fba-9e77-1264609833a6)
 ---
 
-#### 13. 리소스 선택 : 앞에서 생성한 서버 선택 후 "저장" 버튼 클릭
+#### 리소스 선택 : 앞에서 생성한 서버 선택 후 "저장" 버튼 클릭
 ![image](https://github.com/user-attachments/assets/5190b2ef-68d5-4af7-9c81-f169e5f44e9b)
 ---
 
@@ -768,10 +766,15 @@ python -V
 ```
 conda install -y bioconda::annotsv
 ```
-## 5. 주피터랩과 gatk 환경 연동
+## 5. 주피터랩과 annotsv 환경 연동
 ```
 conda install anaconda::ipykernel
 ```
+## 6. annotsv conda deactivate
+```
+conda deactivate
+```
+
 
 
 # ◼︎ Triodenovo 설치
@@ -884,7 +887,7 @@ triodenovo
 
 
 
-<br>
+
 
 # ◼︎ AdmixTools 설치
 
@@ -963,9 +966,12 @@ source ~/.bashrc
 dof4
 ```
 
+
+
+
 <br>
 
-# ◼︎ R 설치
+# ◼︎ conda R 설치
 
 ## 1.가상환경 생성
 ```
@@ -977,12 +983,123 @@ conda create -y -n r_env python=3.10
 conda activate r_env
 ```
 
-## 3. R 설치
+## 3. 주피터랩과 rstudio 환경 연동
+```
+conda install anaconda::ipykernel
+```
+
+## 4. rstudio 설치
+```
+conda install -y r::rstudio
+```
+
+## 5. r-facets 설치
+```
+conda install -y bioconda::r-facets
+```
+
+## 6. 서버 재부팅
+```
+sudo reboot
+```
+
+## 7. 주피터랩에서 R 명령어 확인
+```
+str1 <- paste('Hello!', 'world!', 'is', 'good')
+```
+```
+paste(str1)
+```
+```
+available.packages()
+```
+
+![image](https://github.com/user-attachments/assets/242e1df9-0de2-4f11-9923-a66f63d3ce16)
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+# ◼︎ DeNovoCNN 설치
+## 1. 디렉토리 홈으로 이동
+```
+cd
+```
+## 2. git에서 소스 가져오기
+```
+git clone https://github.com/Genome-Bioinformatics-RadboudUMC/DeNovoCNN.git
+```
+## 3. 디렉토리 이동
+```
+cd ./DeNovoCNN
+```
+## 4. 채널 우선순위 변경
+```
+conda config --set channel_priority flexible
+```
+flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 선택됩니다. 
+
+이 모드는 안정적인 패키지보다는 최신 버전의 패키지를 선호하는 경우에 유용합니다.
+
+•	strict: 공식 채널의 패키지를 우선적으로 선택합니다.
+•	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
+•	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
+
+## 5. yml파일을 이용한 콘다 가상환경 생성 및 패키지 설치
+```
+conda env create -f environment.yml
+```
+
+![image](https://github.com/user-attachments/assets/9d4ad80c-d1a9-4d35-be09-89a46a095e17)
+
+## 6. 가상환경으로 진입
+```
+conda activate tensorflow_env
+```
+
+## 7. ipykernel 설치
+```
+conda install anaconda::ipykernel
+```
+
+## 8. 주피터랩 확인
+
+![image](https://github.com/user-attachments/assets/5f3f14e2-60ce-46e0-b1e0-50f0a2071dc2)
+
+![image](https://github.com/user-attachments/assets/77680e65-9e2b-46cc-a0d7-61d2adc27371)
+
+- Collecting asttokens==2.0.5
+- Collecting backcall==0.2.0
+- Collecting decorator==5.1.1
+- Collecting executing==0.8.3
+  
+..
+
+..
+
+..
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+# ◼︎ R Server 설치
+## 1. R 설치
 ```
 sudo dnf install -y R
 ```
-
-## 4. RServer 설치
+## 2. RServer 설치
 ### 설치 파일 다운로드
 ```
 wget https://download2.rstudio.org/server/rhel9/x86_64/rstudio-server-rhel-2024.09.0-375-x86_64.rpm
@@ -1054,69 +1171,28 @@ PWD : 위에서 지정한 비밀번호
 
 ![image](https://github.com/user-attachments/assets/99d90262-5b90-4a73-802e-38c3ba35fa93)
 
-<br>
-<br>
-<br>
-<br>
-
-# ◼︎ DeNovoCNN 설치
-## 1. 디렉토리 홈으로 이동
+## 8. 홈 디렉토리로 이동
 ```
 cd
 ```
-## 2. git에서 소스 가져오기
-```
-git clone https://github.com/Genome-Bioinformatics-RadboudUMC/DeNovoCNN.git
-```
-## 3. 디렉토리 이동
-```
-cd ./DeNovoCNN
-```
-## 4. 채널 우선순위 변경
-```
-conda config --set channel_priority flexible
-```
-flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 선택됩니다. 
 
-이 모드는 안정적인 패키지보다는 최신 버전의 패키지를 선호하는 경우에 유용합니다.
+<br>
+<br>
 
-•	strict: 공식 채널의 패키지를 우선적으로 선택합니다.
-•	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
-•	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
 
-## 5. yml파일을 이용한 콘다 가상환경 생성 및 패키지 설치
+# ◼︎ screen 설치
+## 1. 설치
 ```
-conda env create -f environment.yml
+sudo yum install -y screen
 ```
-
-![image](https://github.com/user-attachments/assets/9d4ad80c-d1a9-4d35-be09-89a46a095e17)
-
-## 6. 가상환경으로 진입
+## 2. 설치확인
 ```
-conda activate tensorflow_env
+screen -v
 ```
-
-## 7. ipykernel 설치
+## 3. 홈 디렉토리로 이동
 ```
-conda install -y ipykernel
+cd
 ```
-
-## 8. 주피터랩 확인
-
-![image](https://github.com/user-attachments/assets/5f3f14e2-60ce-46e0-b1e0-50f0a2071dc2)
-
-![image](https://github.com/user-attachments/assets/77680e65-9e2b-46cc-a0d7-61d2adc27371)
-
-- Collecting asttokens==2.0.5
-- Collecting backcall==0.2.0
-- Collecting decorator==5.1.1
-- Collecting executing==0.8.3
-  
-..
-
-..
-
-..
 
 
 <br>
@@ -1126,13 +1202,100 @@ conda install -y ipykernel
 
 
 
+# ◼︎ icav2-cli-plugins 설치
+
+## 1. yq 설치
+```
+sudo wget https://github.com/mikefarah/yq/releases/download/v4.18.1/yq_linux_amd64 -O /usr/bin/yq
+```
+
+## 2. yq 실행모드 변경
+```
+sudo chmod +x /usr/bin/yq
+```
+
+## 3. awscli curl jq python3 rsync 설치
+```
+sudo dnf install -y awscli curl jq python3 rsync
+```
+
+## 4. conda gh 설치
+```
+conda install -y conda-forge::gh
+```
+
+## 5. awscliv2.zip 다운로드
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+```
+
+## 6. awscliv2.zip 압축해제
+```
+unzip awscliv2.zip
+```
+
+## 7. aws cli 설치
+```
+sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli–update
+```
+
+## 8. 압축파일 삭제
+```
+rm -rf awscliv2.zip
+```
+
+## 9. icav2-cli-plugins.git 다운로드
+```
+git clone https://github.com/umccr/icav2-cli-plugins.git
+```
+
+## 10. 디렉토리 이동
+```
+cd ./icav2-cli-plugins/
+```
+
+## 11. 설치명령어 수행
+```
+sh install.sh
+```
+
+## 12. 홈 디렉토리로 이동
+```
+cd
+```
+
+## 13. .bashrc 파일 수정
+```
+echo '. "${HOME}/.icav2-cli-plugins/source.sh"' | tee -a .bashrc
+```
+
+## 14. .bashrc 다시 실행
+```
+source ~/.bashrc
+```
 
 
+# ◼︎ conda docker 설치
 
+## 1. 홈 디렉토리로 이동
+```
+cd
+```
 
+## 2. docker-compose 설치
+```
+conda install -y conda-forge::docker-compose
+```
 
+## 3. docker-py 설치
+```
+conda install -y conda-forge::docker-py
+```
 
-
+## 4. docker 설치
+```
+sudo dnf install -y docker
+```
 
 
 
@@ -1229,6 +1392,55 @@ sudo netstat -nltp
 크롬등의 브라우저 창을 열고 주소란에 입력 http://210.109.54.95:8080
 
 ![image](https://github.com/user-attachments/assets/0e6c827a-337d-4432-bdc4-b01ea62e8490)
+
+
+# ◼︎ Only GATK 설치 및 실행
+
+## 1. wget, unzip 설치
+```
+sudo dnf -y install wget unzip
+```
+
+## 2. java17 설치
+```
+sudo dnf -y install java-17-openjdk-devel
+```
+
+## 3. GATJ 설치 파일 다운로드
+```
+wget https://github.com/broadinstitute/gatk/releases/download/4.6.0.0/gatk-4.6.0.0.zip
+```
+
+## 4. 압축해제
+```
+unzip gatk-4.6.0.0.zip
+```
+
+## 5. 압축파일 삭제
+```
+rm -rf gatk-4.6.0.0.zip
+```
+
+## 6. 쉘파일 수정
+```
+echo 'export PATH=$PATH:{path} /gatk-4.6.0.0' >> ~/.bashrc
+```
+
+## 7. 쉘파일 재시동
+```
+source ~/.bashrc
+```
+
+## 8. GATK 명령 옵션 예시
+```
+gatk BaseRecalibrator \
+   -I dedup.NA12878.bam \
+   -R hs38DH.fasta \
+   --known-sites dbsnp_146.hg38.vcf.gz \
+   --known-sites 000G_phase1.snps.high_confidence.hg38.vcf.gz \
+   --known-sites Mills_and_1000G_gold_standard.indels.hg38.vcf.gz \
+   -O NA12878.recal.table
+```
 
 
 
