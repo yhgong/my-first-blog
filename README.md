@@ -291,8 +291,12 @@ conda config --set channel_priority flexible
 flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 선택됩니다. 이 모드는 안정적인 패키지보다는 최신 버전의 패키지를 선호하는 경우에 유용합니다.
 
 •	strict: 공식 채널의 패키지를 우선적으로 선택합니다.
+
 •	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
+
 •	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
+
+
 # ◼︎ conda gatk 환경에 각종 툴 설치
 ## install bwa, vcfstats, vcftools, bedtools, fastqc, somalier, slivar, salmon, s5cmd, plink, plink2, multiqc, minimap2, htslib, king, libxml2-devel-cos6-x86_64, gistic2 설치
 
