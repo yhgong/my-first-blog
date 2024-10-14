@@ -699,7 +699,7 @@ conda deactivate
 ```
 conda create -y -n hail python=3.10
 ```
-## 2. manta 가상환경 진입
+## 2. hail 가상환경 진입
 ```
 conda activate hail
 ```
