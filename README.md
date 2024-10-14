@@ -61,6 +61,10 @@
 ---
 
 <br>
+<br>
+<br>
+<br>
+
 
 # ◼︎ 주피터랩 설치 및 conda GATK 연동
 
@@ -295,6 +299,11 @@ flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 �
 •	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
 
 •	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
+
+<br>
+<br>
+<br>
+<br>
 
 
 # ◼︎ conda gatk 환경에 각종 툴 설치
@@ -631,6 +640,11 @@ conda install anaconda::ipykernel
 conda deactivate
 ```
 
+<br>
+<br>
+<br>
+<br>
+
 
 # ◼︎ manta conda 설치
 ## 1. manta 가상환경 생성
@@ -689,6 +703,10 @@ conda deactivate
 ```
 
 
+<br>
+<br>
+<br>
+<br>
 
 
 
