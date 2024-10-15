@@ -59,7 +59,7 @@
 
 ![image](https://github.com/user-attachments/assets/aeccbbe0-bd7b-4de2-bb2b-eb7f259750a1)
 
-##### 인바운드와 아웃바운드에 대한 설명은 PPT 장표로 좀더 자세히 섦명 드리도록 하겠습니다. 
+##### 인바운드와 아웃바운드에 대한 설명은 조금 더 진행 후 PPT 장표로 자세히 섦명 드리도록 하겠습니다. 
 
 ---
 ### 8. 생성 버튼 클릭
@@ -135,10 +135,14 @@ sudo dnf repolist all
 ```
 sudo dnf config-manager --set-enabled crb
 ```
-추가된 crb 레파지토리 확인
+#### 추가된 crb 레파지토리 확인
 ```
 sudo dnf repolist
 ```
+```
+sudo dnf repolist -v
+```
+
 ![image](https://github.com/user-attachments/assets/8cf154ba-3f50-4633-97ab-fdf4ef768bed)
 
 ![image](https://github.com/user-attachments/assets/3814184e-1ae3-401a-b5c8-be82fbfaca64)
