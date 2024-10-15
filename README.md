@@ -44,13 +44,19 @@
 
 ![image](https://github.com/user-attachments/assets/abeb2c6a-0197-49b1-80e4-35bfbe47f8e2)
 
-- VPC : 앞전 실습에서 생성한 VPC 선택
+##### 서브넷의 개념은 아파트 단지의 동 개념으로 생각하시면 됩니다.
+
+![image](https://github.com/user-attachments/assets/451a8ff3-0c64-493e-8038-b5b4ac934760)
+
+- VPC : 생성해 놓은 VPC 선택
 - 서브넷 : main 서브넷 선택
 - 보안그룹 : 아래와 같이 포트 오픈
+  - 보안그룹의 개념 : 아파트 공동 현관문에 시건장치 및 내 집 현관문의 시건 장치라고 생각하시면 됩니다. 
   - 출발지 : www.naver.com 에서 "내 아이피 주소 확인" 으로 확인
-  ![image](https://github.com/user-attachments/assets/9850df61-c501-4cc6-95ea-f9df88af79da)
+![image](https://github.com/user-attachments/assets/9850df61-c501-4cc6-95ea-f9df88af79da)
 
 ![image](https://github.com/user-attachments/assets/e31f4ae3-5abf-440e-97c0-1118fe039bfa)
+
 ![image](https://github.com/user-attachments/assets/aeccbbe0-bd7b-4de2-bb2b-eb7f259750a1)
 
 ##### 인바운드와 아웃바운드에 대한 설명은 PPT 장표로 좀더 자세히 섦명 드리도록 하겠습니다. 
