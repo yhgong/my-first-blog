@@ -36,6 +36,12 @@
 ---
 ### 7. 네트워크
 
+#### VPC 개념
+
+![image](https://github.com/user-attachments/assets/fb091867-a4d8-4878-829f-3a5c04cf57ce)
+
+##### 아파트 단지를 조성 할 때 단지의 테두리를 정하듯이 클라우드 상에 서버를 배치하기 위해서는 아파트 단지의 테두리와 같은 역할을 하는 네트워크의 범위를 정해야 합니다.
+
 ![image](https://github.com/user-attachments/assets/abeb2c6a-0197-49b1-80e4-35bfbe47f8e2)
 
 - VPC : 앞전 실습에서 생성한 VPC 선택
@@ -46,6 +52,9 @@
 
 ![image](https://github.com/user-attachments/assets/e31f4ae3-5abf-440e-97c0-1118fe039bfa)
 ![image](https://github.com/user-attachments/assets/aeccbbe0-bd7b-4de2-bb2b-eb7f259750a1)
+
+##### 인바운드와 아웃바운드에 대한 설명은 PPT 장표로 좀더 자세히 섦명 드리도록 하겠습니다. 
+
 ---
 ### 8. 생성 버튼 클릭
 
@@ -70,6 +79,7 @@
 ![image](https://github.com/user-attachments/assets/5190b2ef-68d5-4af7-9c81-f169e5f44e9b)
 ---
 
+<br>
 <br>
 <br>
 <br>
@@ -155,7 +165,7 @@ sudo dnf repolist
 ```
 sudo dnf -y update
 ```
-
+---
 ## 2. System Extension Install
 wget, git-lfs net-tools traceroute 설치
 ```
