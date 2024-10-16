@@ -423,7 +423,7 @@ bwa
 ![image](https://github.com/user-attachments/assets/383380de-de05-4561-832b-2b39f441d883)
 
 
-## 3. biopet-vcfstats 설치
+## 4. biopet-vcfstats 설치
 ```
 conda install -y bioconda::biopet-vcfstats
 ```
@@ -435,7 +435,7 @@ biopet-vcfstats
 
 ![image](https://github.com/user-attachments/assets/6cd4b92d-d4cf-4b95-b358-a8f0663f71a1)
 
-## 4. vcftools 설치
+## 5. vcftools 설치
 ```
 conda install -y bioconda::vcftools
 ```
@@ -446,7 +446,7 @@ vcftools
 
 ![image](https://github.com/user-attachments/assets/6b358e08-a66c-4561-9b91-041413c4efae)
 
-## 5. bedtools 설치
+## 6. bedtools 설치
 ```
 conda install -y bioconda::bedtools
 ```
@@ -457,7 +457,7 @@ bedtools
 
 ![image](https://github.com/user-attachments/assets/02536580-5059-4c78-ac5b-6615c66fa89b)
 
-## 6. fastqc 설치
+## 7. fastqc 설치
 ```
 conda install -y bioconda::fastqc
 ```
@@ -469,7 +469,7 @@ fastqc
 ![image](https://github.com/user-attachments/assets/22305c63-c670-47e7-b0ad-0826ce2b6ff4)
 
 
-## 7. somalier 설치
+## 8. somalier 설치
 ```
 conda install -y bioconda::somalier
 ```
@@ -480,7 +480,7 @@ somalier
 
 ![image](https://github.com/user-attachments/assets/17196aa4-9877-45c6-9f9f-ef0abb7c5ed0)
 
-## 8. slivar 설치
+## 9. slivar 설치
 ```
 conda install -y bioconda::slivar
 ```
@@ -491,7 +491,7 @@ slivar
 
 ![image](https://github.com/user-attachments/assets/52b4f9a4-62e8-4e1e-9341-20aa1e156f2a)
 
-## 9. salmon 설치
+## 10. salmon 설치
 ```
 conda install -y salmon
 ```
@@ -502,7 +502,7 @@ salmon
 
 ![image](https://github.com/user-attachments/assets/d4ff2913-27fe-426c-a7b9-51e84e94e34c)
 
-## 10. s5cmd 설치
+## 11. s5cmd 설치
 ```
 conda install -y conda-forge::s5cmd
 ```
@@ -513,7 +513,7 @@ s5cmd
 
 ![image](https://github.com/user-attachments/assets/42204e82-af72-4a25-a0a4-7ca76d47cfb4)
 
-## 11. plink 설치
+## 12. plink 설치
 ```
 conda install -y bioconda::plink
 ```
@@ -524,7 +524,7 @@ plink
 
 ![image](https://github.com/user-attachments/assets/58d32fd9-becc-45ee-a18c-f93396b18543)
 
-## 12. plink2 설치
+## 13. plink2 설치
 ```
 conda install -y bioconda::plink2
 ```
@@ -535,7 +535,7 @@ plink2
 
 ![image](https://github.com/user-attachments/assets/432dc555-12a9-4e8c-a76f-6d848586b813)
 
-## 13. multiqc 설치 ★
+## 14. multiqc 설치 ★
 ```
 conda install -y bioconda::multiqc
 ```
@@ -546,7 +546,7 @@ multiqc
 
 ![image](https://github.com/user-attachments/assets/0dba1dba-a167-4be7-9a4b-46918f2ed017)
 
-## 14. minimap2 설치
+## 15. minimap2 설치
 ```
 conda install -y bioconda::minimap2
 ```
@@ -558,7 +558,7 @@ minimap2
 ![image](https://github.com/user-attachments/assets/2f7763bb-ffe1-43e3-a36a-f7e73a009d1a)
 
 
-## 15. king 설치
+## 16. king 설치
 ```
 conda install -y bioconda::king
 ```
@@ -570,7 +570,7 @@ king
 ![image](https://github.com/user-attachments/assets/46e7a5e8-7716-44ee-98e2-e1278de9775f)
 
 
-## 16. libxml2-devel-cos6-x86_64 설치
+## 17. libxml2-devel-cos6-x86_64 설치
 ```
 conda install -y conda-forge::libxml2-devel-cos6-x86_64
 ```
@@ -581,7 +581,7 @@ k8
 
 ![image](https://github.com/user-attachments/assets/e71f64c4-8e33-4498-a553-0a50c8bb99fb)
 
-## 17. gistic2 설치 ★
+## 18. gistic2 설치 ★
 ```
 conda install -y hcc::gistic2
 ```
@@ -599,7 +599,7 @@ sudo ln -s /usr/lib64/libncursesw.so.6.2 /usr/lib64/libtinfo.so.5
 sudo ln -s /usr/lib64/libform.so.6.2 /usr/lib64/libform.so.5
 ```
 
-## 18. bioconductor-mafdb.gnomadex.r2.1.hs37d5 설치 ★
+## 19. bioconductor-mafdb.gnomadex.r2.1.hs37d5 설치 ★
 ```
 conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.hs37d5
 ```
@@ -614,12 +614,12 @@ xq
 ![image](https://github.com/user-attachments/assets/b83299a6-931a-415d-999f-7bc83edf0c90)
 
 
-## 19. bioconductor-mafdb.gnomadex.r2.1.grch38 설치
+## 20. bioconductor-mafdb.gnomadex.r2.1.grch38 설치
 ```
 conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.grch38
 ```
 
-## 20.Rust 설치
+## 21.Rust 설치
 
 ![image](https://github.com/user-attachments/assets/cc83dce7-692f-4624-a42d-7880b2274aa1)
 
@@ -660,12 +660,12 @@ ls -lrt
 
 ![image](https://github.com/user-attachments/assets/dccad5c1-7baf-4a0d-affd-5f8db49110ec)
 
-## 21. rtoml 설치
+## 22. rtoml 설치
 ```
 pip install rtoml
 ```
 
-## 22. vcfstats 설치 ★
+## 23. vcfstats 설치 ★
 ```
 pip install -U vcfstats
 ```
@@ -675,7 +675,7 @@ pip install -U vcfstats
 ![image](https://github.com/user-attachments/assets/29f75b3d-6e2b-48a7-a039-41ad1c629adf)
 
 
-## 23. JAVA 실행 환경 변경
+## 24. JAVA 실행 환경 변경
 
 ### java 버전 확인
 ```
@@ -699,10 +699,6 @@ sudo alternatives --config java
 ```
 ![image](https://github.com/user-attachments/assets/085d8640-8550-4d1b-a634-4f4d97c98588)
 
-## 24. 주피터랩과 gatk 환경 연동
-```
-conda install anaconda::ipykernel
-```
 
 ## 25. 가상환경 빠져나오기
 ```
