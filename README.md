@@ -338,8 +338,6 @@ conda create -y -n gatk
 ![image](https://github.com/user-attachments/assets/aa19b3ac-7c32-4bc7-b8b7-a04302e1ec24)
 
 
-![image](https://github.com/user-attachments/assets/aa3d417c-ed92-44cc-b28b-8c22791b7592)
-
 ## 2. gatk 가상환경으로 진입
 ```
 conda activate gatk
