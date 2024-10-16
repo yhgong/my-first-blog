@@ -829,7 +829,13 @@ conda install anaconda::ipykernel
 ### 연동 확인
 ![image](https://github.com/user-attachments/assets/c4fe0fcc-3f13-419f-943b-d73ff7839a6a)
 
+## 14. conda deactivate
+```
+conda deactivate
+```
 
+
+<br>
 <br>
 <br>
 <br>
@@ -896,7 +902,17 @@ conda install anaconda::ipykernel
 
 ..
 
+## 9. 홈 디렉토리 이동
+```
+cd
+```
 
+## 10. conda deactivate
+```
+conda deactivate
+```
+
+<br>
 <br>
 <br>
 <br>
@@ -913,7 +929,7 @@ conda create -y -n annotsv
 ```
 conda activate annotsv
 ```
-## 3. 파이썬 버전 2.7 확인
+## 3. 파이썬 버전
 ```
 python -V
 ```
@@ -941,10 +957,6 @@ conda deactivate
 ```
 cd
 ```
-```
-pwd
-```
-![image](https://github.com/user-attachments/assets/9a4022d5-5c2e-4867-933b-3f36b221bf05)
 
 ## 2.파일 다운로드
 ```
@@ -1001,7 +1013,7 @@ cd ..
 ## 10.make
 make에 필요한 툴 설치
 ```
-sudo dnf install bzip2-devel
+sudo dnf install -y bzip2-devel
 ```
 ```
 make
@@ -1074,23 +1086,38 @@ cd
 ```
 git clone https://github.com/argriffing/eigensoft.git
 ```
-## 3. 압축파일 해제
-```
-unzip v7.0.2.zip
-```
-## 4. 디렉토리 이동
+## 3. 디렉토리 이동
 ```
 cd eigensoft/src
 ```
-## 5. make
+## 4. make
 ```
 make eigenstrat
 ```
-## 6. 실행파일 이동
+## 5. 실행파일 이동
 ```
 mv eigenstrat ../bin
 ```
+## 6.디렉토리 등록
 
+### 홈디렉토리 이동
+```
+cd
+```
+```
+echo 'export PATH=$PATH:/home/rocky/eigensoft/bin' >> ~/.bashrc
+```
+
+### 쉘 반영
+```
+source ~/.bashrc
+```
+### 프로그램 실행 확인
+```
+eigenstrat
+```
+
+<br>
 <br>
 <br>
 <br>
@@ -1100,12 +1127,9 @@ mv eigenstrat ../bin
 
 # ◼︎ AdmixTools 설치
 
-## 1.설치 위치
+## 1.홈 디렉토리 이동
 ```
 cd
-```
-```
-pwd
 ```
 
 ![image](https://github.com/user-attachments/assets/50c776f5-de4c-40f4-9506-0f90ab888c33)
@@ -1179,6 +1203,7 @@ dof4
 <br>
 <br>
 <br>
+<br>
 
 
 # ◼︎ conda R 설치
@@ -1203,17 +1228,22 @@ conda install anaconda::ipykernel
 conda install -y r::rstudio
 ```
 
-## 5. r-facets 설치
+## 5. r-essentials 설치
+```
+conda install r::r-essentials
+```
+
+## 6. r-facets 설치
 ```
 conda install -y bioconda::r-facets
 ```
 
-## 6. 서버 재부팅
+## 7. 서버 재부팅
 ```
 sudo reboot
 ```
 
-## 7. 주피터랩에서 R 명령어 확인
+## 8. 주피터랩에서 R 명령어 확인
 ```
 str1 <- paste('Hello!', 'world!', 'is', 'good')
 ```
@@ -1245,7 +1275,7 @@ wget https://download2.rstudio.org/server/rhel9/x86_64/rstudio-server-rhel-2024.
 ```
 ### RStudio 설치
 ```
-sudo yum install rstudio-server-rhel-2024.09.0-375-x86_64.rpm
+sudo yum install -y rstudio-server-rhel-2024.09.0-375-x86_64.rpm
 ```
 ### RStudio 설치파일 삭제
 ```
