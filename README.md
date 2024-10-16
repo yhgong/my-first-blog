@@ -732,11 +732,7 @@ conda install -y bioconda::manta
 ```
 conda install -y bioconda::strelka
 ```
-## 6. 주피터랩과 gatk 환경 연동
-```
-conda install anaconda::ipykernel
-```
-## 7. pip 재설치
+## 6. pip 재설치
 ```
 pip 
 ```
@@ -762,7 +758,7 @@ pip -V
 
 ![image](https://github.com/user-attachments/assets/51aee903-c4d3-4f87-b231-5bb406f86706)
 
-## 8. 가상환경 빠져나오기
+## 7. 가상환경 빠져나오기
 ```
 conda deactivate
 ```
