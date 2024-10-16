@@ -826,7 +826,7 @@ pip install psycopg2
 ```
 pip install gnomad
 ```
-## 13. 주피터랩과 gatk 환경 연동
+## 13. 주피터랩과 hail 환경 연동
 ```
 conda install anaconda::ipykernel
 ```
