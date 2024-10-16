@@ -782,7 +782,7 @@ conda create -y -n hail python=3.10
 ```
 conda activate hail
 ```
-## 3. 파이썬 버전 2.7 확인
+## 3. 파이썬 버전
 ```
 python -V
 ```
@@ -790,37 +790,37 @@ python -V
 ```
 pip install hail
 ```
-## 5. colabfold 설치
-```
-conda install -y bioconda::colabfold
-```
-## 6. crossmap 설치
-```
-conda install -y bioconda::crossmap
-```
-## 7. deeptools 설치
-```
-conda install -y bioconda::deeptools
-```
-## 8. harfbuzz 설치
-```
-conda install -y conda-forge::harfbuzz
-```
-## 9. liftover 설치
-```
-conda install -y bioconda::liftover
-```
-## 10. postgresql-devel 설치
-```
-sudo dnf install -y postgresql-devel
-```
-## 11. psycopg2 설치
+## 5. psycopg2 설치
 ```
 pip install psycopg2
 ```
-## 12. gnomad 설치
+## 6. gnomad 설치
 ```
 pip install gnomad
+```
+## 7. colabfold 설치
+```
+conda install -y bioconda::colabfold
+```
+## 8. crossmap 설치
+```
+conda install -y bioconda::crossmap
+```
+## 9. deeptools 설치
+```
+conda install -y bioconda::deeptools
+```
+## 10. harfbuzz 설치
+```
+conda install -y conda-forge::harfbuzz
+```
+## 11. liftover 설치
+```
+conda install -y bioconda::liftover
+```
+## 12. postgresql-devel 설치
+```
+sudo dnf install -y postgresql-devel
 ```
 ## 13. 주피터랩과 hail 환경 연동
 ```
