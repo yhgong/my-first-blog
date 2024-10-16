@@ -574,6 +574,10 @@ king
 ```
 conda install -y conda-forge::libxml2-devel-cos6-x86_64
 ```
+### 설치확인
+```
+k8
+```
 
 ![image](https://github.com/user-attachments/assets/e71f64c4-8e33-4498-a553-0a50c8bb99fb)
 
