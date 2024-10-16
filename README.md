@@ -319,6 +319,11 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 ## 11.포트에 대한 개념과 방화벽에 대한 개념
 
+### 열려 있는 포트 확인
+```
+sudo netstat -nltp
+```
+
 ![image](https://github.com/user-attachments/assets/ece4e3f6-e754-4edb-bc19-712c788a883e)
 
 # ◼︎ GATK conda 설치
