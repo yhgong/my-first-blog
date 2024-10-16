@@ -322,15 +322,16 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ![image](https://github.com/user-attachments/assets/ece4e3f6-e754-4edb-bc19-712c788a883e)
 
 # ◼︎ GATK conda 설치
-## (base) 환경에서 설치 
-<br>
-
-![image](https://github.com/user-attachments/assets/aa19b3ac-7c32-4bc7-b8b7-a04302e1ec24)
 
 ## 1. gatk 가상환경 생성
 ```
 conda create -y -n gatk
 ```
+## (base) 환경에서 설치 
+
+
+![image](https://github.com/user-attachments/assets/aa19b3ac-7c32-4bc7-b8b7-a04302e1ec24)
+
 
 ![image](https://github.com/user-attachments/assets/aa3d417c-ed92-44cc-b28b-8c22791b7592)
 
