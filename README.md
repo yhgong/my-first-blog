@@ -165,7 +165,7 @@ sudo dnf repolist
 
 ![image](https://github.com/user-attachments/assets/165b69a5-0568-4de1-81b4-688f479d5e47)
 
-#### dnf -y update 명령은
+#### dnf -y update 명령은 ★
 - 기존에 설치된 패키지들의 최신 버전을 확인하고, 필요한 경우 최신 버전으로 업데이트합니다.
 - 패키지 목록 데이터베이스를 갱신하여 최신 상태로 유지합니다.
 1. dnf는 먼저 패키지 목록 데이터베이스를 조회하여 현재 설치된 패키지들의 최신 버전을 확인합니다.
@@ -177,23 +177,29 @@ sudo dnf -y update
 ```
 ---
 ## 2. System Extension Install
-wget, git-lfs net-tools traceroute 설치
+### wget, git-lfs net-tools traceroute 설치
 ```
 sudo dnf -y install wget git-lfs net-tools traceroute
 ```
 <br>
 
-Development Tools 설치 -- 필요시 소스코드등을 컴파일 할때 필요..
+### Development Tools 설치 -- 소스코드등을 컴파일 할때 필요..  ★
 ```
 sudo dnf -y groupinstall 'Development Tools'
 ```
 위 명령어는 "개발 도구" 그룹에 속하는 모든 패키지를 자동으로 설치합니다.
-설치 후에는 해당 패키지들을 사용하여 다양한 프로그래밍 작업을 수행할 수 있습니다. 예를 들어, Python, Java, C/C++, Go 등의 언어를 사용하여 프로그램을 개발할 수 있습니다. 또한, 디버깅 도구, 테스트 도구, 라이브러리 등도 함께 설치되므로 개발 작업을 더욱 효율적으로 수행할 수 있습니다. 그룹 패키지를 설치하면 여러 개의 개별 패키지를 일일이 설치하는 것보다 빠르고 간편합니다.
+설치 후에는 해당 패키지들을 사용하여 다양한 프로그래밍 작업을 수행할 수 있습니다. 
+예를 들어, Python, Java, C/C++, Go 등의 언어를 사용하여 프로그램을 개발할 수 있습니다. 
+또한, 디버깅 도구, 테스트 도구, 라이브러리 등도 함께 설치되므로 개발 작업을 더욱 효율적으로 수행할 수 있습니다. 
+그룹 패키지를 설치하면 여러 개의 개별 패키지를 일일이 설치하는 것보다 빠르고 간편합니다.
 
 ## 3. Environment-modules 설치
 ```
 sudo yum -y install environment-modules
 ```
+#### 설치하는 이유 
+environment-modules 패키지는 다양한 운영체제 및 프로그래밍 언어에서 사용되는 라이브러리나 도구들의 의존성 문제를 해결해 줍니다. 
+이를 통해 시스템의 안정성과 성능을 향상시킬 수 있습니다.
 
 ## 4. java 설치
 ```
@@ -201,46 +207,66 @@ sudo dnf -y install java-11-openjdk-devel java-17-openjdk-devel
 ```
 
 ## 5. miniconda 설치
+### 디렉토리 생성, 한번에 생성하기 위해 -p 옵션 사용
 ```
 sudo mkdir -p /opt/miniconda3
 ```
+### 오너쉽 변경
 ```
 sudo chown -R 1000:1000 /opt/miniconda3
 ```
 ```
 sudo chown -R rocky:rocky /opt/miniconda3
 ```
+### 설치 쉘 파일 다운로드
 ```
 sudo wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /opt/miniconda3/miniconda.sh
 ```
+### 설치
 ```
 sudo bash /opt/miniconda3/miniconda.sh -b -u -p /opt/miniconda3
 ```
+### 설치 파일 삭제
 ```
 sudo rm -rf /opt/miniconda3/miniconda.sh
 ```
+### 쉘파일에 miniconda 환경 반영
 ```
 /opt/miniconda3/bin/conda init bash
 ```
-쉘을 빠져나왔다가 다시 들어가면 설치된 콘다 (base)환경으로 접속됩니다.
+### 쉘을 빠져나왔다가 다시 들어가면 설치된 콘다 (base)환경으로 접속됩니다.
+```
+exit
+```
 
 ## 6. 콘다 채널 추가
-채널 default, bioconda, conda-forge
+
+### 등록된 채널 확인
 ```
-conda config --add channels defaults
+conda config --show channels
+```
+### 채널 bioconda, conda-forge
+```
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-등록 채널 확인
+### 등록된 채널 확인
 ```
 conda config --show channels
 ```
 
-채널 우선 순위 변경
+### 채널 우선 순위 변경
 ```
-conda config --set channel_priority strict
+conda config --set channel_priority flexible
 ```
+flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 선택됩니다. 이 모드는 안정적인 패키지보다는 최신 버전의 패키지를 선호하는 경우에 유용합니다.
+
+•	strict: 공식 채널의 패키지를 우선적으로 선택합니다.
+
+•	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
+
+•	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
 
 ## 7. jupyterlab 설치
 ```
@@ -279,7 +305,7 @@ conda install -y nb_conda_kernels
 #### 2. 에러 해결
   - DLL 임포트 에러 등의 문제를 해결할 수 있습니다.
 
-## 10. 주피터랩 실행 확인
+## 10. 주피터랩 실행 확인 ★
 ```
 jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
@@ -295,41 +321,47 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 ![image](https://github.com/user-attachments/assets/ece4e3f6-e754-4edb-bc19-712c788a883e)
 
-## 12. GATK conda 설치
-(base) 환경에서 설치 <br>
+# ◼︎ GATK conda 설치
+## (base) 환경에서 설치 
+<br>
 
 ![image](https://github.com/user-attachments/assets/aa19b3ac-7c32-4bc7-b8b7-a04302e1ec24)
 
-### gatk 가상환경 생성
+## 1. gatk 가상환경 생성
 ```
 conda create -y -n gatk
 ```
 
 ![image](https://github.com/user-attachments/assets/aa3d417c-ed92-44cc-b28b-8c22791b7592)
 
-### gatk 가상환경으로 진입
+## 2. gatk 가상환경으로 진입
 ```
 conda activate gatk
 ```
 ![image](https://github.com/user-attachments/assets/9eeb679b-6b13-4de0-8082-d79e838309cb)
 
-### python version 확인
+## 3. 주피터랩 연동을 위한 ipykernel 설치
+```
+conda install -y anaconda::ipykernel
+```
+
+## 4. python version 확인
 ```
 python -V
+```
+### python 버전 확인은 중요 합니다. 어떤 패키지가 파이썬의 버전을 변경 시키는데 변경 시키는 조건이 가상환경의 어떤 조건과 일치 할때만 python 버전이 변경 되기 때문입니다.
+
+## 5. 채널 우선 순위 확인
+```
+conda config --show channel_priority
 ```
 
 ### 채널 우선 순위 변경
 ```
 conda config --set channel_priority flexible
 ```
-flexible 모드에서는 각 채널의 최신 버전 패키지가 자동으로 선택됩니다. 이 모드는 안정적인 패키지보다는 최신 버전의 패키지를 선호하는 경우에 유용합니다.
 
-•	strict: 공식 채널의 패키지를 우선적으로 선택합니다.
-
-•	relaxed: 공식 채널과 비공채널의 패키지를 동등하게 고려합니다.
-
-•	flexible: 각 채널의 최신 버전 패키지를 자동으로 선택합니다.
-
+<br>
 <br>
 <br>
 <br>
@@ -352,7 +384,15 @@ bamtofastq
 
 ## 2. ctat-mutations 설치
 ```
-conda install bioconda::ctat-mutations
+conda install -y bioconda::ctat-mutations
+```
+### python 버전 확인
+```
+python -V
+```
+### 설치 확인
+```
+gatk --list
 ```
 주피터랩 연동 확인
 1. (base) 환경에서 주피터랩 실행   
@@ -362,7 +402,7 @@ conda install bioconda::ctat-mutations
 
 3. gatk 명령어 실행 확인 - 주피터랩에서 외부명령 실행시 명령어 앞에 "느낌표" + 실행하고자하는 명령어 ! <br>
 ```
-!gatk
+!gatk --list
 ```
 ![image](https://github.com/user-attachments/assets/8341da54-b8e5-408a-9e00-48d6cb7834ab)
 
@@ -497,14 +537,10 @@ conda install -y bioconda::multiqc
 ```
 ### 설치확인
 ```
-cd /opt/miniconda3/envs/gatk/bin
+multiqc
 ```
 
-![image](https://github.com/user-attachments/assets/43fbc731-d747-45e8-8059-7eb56c48c713)
-
-```
-cd
-```
+![image](https://github.com/user-attachments/assets/0dba1dba-a167-4be7-9a4b-46918f2ed017)
 
 ## 14. minimap2 설치
 ```
@@ -534,10 +570,6 @@ king
 ```
 conda install -y conda-forge::libxml2-devel-cos6-x86_64
 ```
-### 설치확인
-```
-k8
-```
 
 ![image](https://github.com/user-attachments/assets/e71f64c4-8e33-4498-a553-0a50c8bb99fb)
 
@@ -565,7 +597,10 @@ conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.hs37d5
 ```
 ### 설치확인
 ```
-
+yq
+```
+```
+xq
 ```
 
 ![image](https://github.com/user-attachments/assets/b83299a6-931a-415d-999f-7bc83edf0c90)
@@ -574,10 +609,6 @@ conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.hs37d5
 ## 19. bioconductor-mafdb.gnomadex.r2.1.grch38 설치
 ```
 conda install -y bioconda::bioconductor-mafdb.gnomadex.r2.1.grch38
-```
-### 설치확인
-```
-yq
 ```
 
 ## 20.Rust 설치
