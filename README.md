@@ -1243,12 +1243,7 @@ conda install r::r-essentials
 conda install -y bioconda::r-facets
 ```
 
-## 7. 서버 재부팅
-```
-sudo reboot
-```
-
-## 8. 주피터랩에서 R 명령어 확인
+## 7. 주피터랩에서 R 명령어 확인
 ```
 str1 <- paste('Hello!', 'world!', 'is', 'good')
 ```
@@ -1265,7 +1260,8 @@ available.packages()
 <br>
 <br>
 <br>
-
+<br>
+<br>
 
 
 # ◼︎ R Server 설치
@@ -1448,6 +1444,15 @@ echo '. "${HOME}/.icav2-cli-plugins/source.sh"' | tee -a .bashrc
 source ~/.bashrc
 ```
 
+## 15. 실행확인
+```
+icav2
+```
+
+![image](https://github.com/user-attachments/assets/c6827969-0538-4651-9067-a36b91519e1a)
+
+
+<br>
 <br>
 <br>
 <br>
