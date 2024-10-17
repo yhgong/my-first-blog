@@ -255,6 +255,10 @@ conda config --add channels conda-forge
 ```
 conda config --show channels
 ```
+### 채녈 우선순위 보기
+```
+conda config --show channel_priority
+```
 
 ### 채널 우선 순위 변경
 ```
@@ -782,51 +786,51 @@ conda create -y -n hail python=3.10
 ```
 conda activate hail
 ```
-## 3. 파이썬 버전
+## 3. 주피터랩과 hail 환경 연동
+```
+conda install -y anaconda::ipykernel
+```
+## 4. 파이썬 버전
 ```
 python -V
 ```
-## 4. hail 설치
+## 5. hail 설치
 ```
 pip install hail
 ```
-## 5. psycopg2 설치
-```
-pip install psycopg2
-```
-## 6. gnomad 설치
-```
-pip install gnomad
-```
-## 7. colabfold 설치
-```
-conda install -y bioconda::colabfold
-```
-## 8. crossmap 설치
-```
-conda install -y bioconda::crossmap
-```
-## 9. deeptools 설치
-```
-conda install -y bioconda::deeptools
-```
-## 10. harfbuzz 설치
-```
-conda install -y conda-forge::harfbuzz
-```
-## 11. liftover 설치
-```
-conda install -y bioconda::liftover
-```
-## 12. postgresql-devel 설치
+## 13. postgresql-devel 설치
 ```
 sudo dnf install -y postgresql-devel
 ```
-## 13. 주피터랩과 hail 환경 연동
+## 6. psycopg2 설치
 ```
-conda install anaconda::ipykernel
+pip install psycopg2
 ```
-### 연동 확인
+## 7. gnomad 설치
+```
+pip install gnomad
+```
+## 8. colabfold 설치
+```
+conda install -y bioconda::colabfold
+```
+## 9. crossmap 설치
+```
+conda install -y bioconda::crossmap
+```
+## 10. deeptools 설치
+```
+conda install -y bioconda::deeptools
+```
+## 11. harfbuzz 설치
+```
+conda install -y conda-forge::harfbuzz
+```
+## 12. liftover 설치
+```
+conda install -y bioconda::liftover
+```
+## 13. 연동 확인
 ![image](https://github.com/user-attachments/assets/c4fe0fcc-3f13-419f-943b-d73ff7839a6a)
 
 ## 14. conda deactivate
@@ -882,7 +886,7 @@ conda activate tensorflow_env
 
 ## 7. ipykernel 설치
 ```
-conda install anaconda::ipykernel
+conda install -y anaconda::ipykernel
 ```
 
 ## 8. 주피터랩 확인
@@ -933,14 +937,15 @@ conda activate annotsv
 ```
 python -V
 ```
-## 4. annotsv 설치
+## 4. 주피터랩과 annotsv 환경 연동
+```
+conda install -y anaconda::ipykernel
+```
+## 5. annotsv 설치
 ```
 conda install -y bioconda::annotsv
 ```
-## 5. 주피터랩과 annotsv 환경 연동
-```
-conda install anaconda::ipykernel
-```
+
 ## 6. annotsv conda deactivate
 ```
 conda deactivate
