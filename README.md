@@ -1479,24 +1479,17 @@ sudo dnf install -y docker
 
 
 # ◼︎ Galaxy 설치
-## 1.SSH 서버 접속 및 위치 확인
 
-![image](https://github.com/user-attachments/assets/18b2480a-b6b6-4818-8716-4ec4260f6cea)
-
-(base) 가상환경 확인
-
-![image](https://github.com/user-attachments/assets/05f59f13-1eff-441a-94d8-b48c9c95b789)
-
-(base) 디렉토리 위치 확인 <br>
+## 1. 홈 디렉토리 이동
 ```
-pwd
+cd
 ```
-![image](https://github.com/user-attachments/assets/d9c9a7a9-fcf1-4083-be9c-a52cf463072d)
 
 ## 2.소스 다운로드
 ```
 git clone https://github.com/galaxyproject/galaxy.git
 ```
+
 ## 3.다운받은 디렉토리로 이동
 ```
 cd ./galaxy
@@ -1507,31 +1500,32 @@ cd ./galaxy
 git fetch origin && git checkout release_24.1 && git pull --ff-only origin release_24.1
 ```
 
-## 5.설치
+## 5.설치 ★★
 ```
 sh run.sh
 ```
 
-# ◼︎ 외부에서 galaxy 접속을 위한 설정
-최초에 galaxy를 설치하면 내부에서만 접속이 가능한 상태로 실행이 됩니다.
+## 외부에서 galaxy 접속을 위한 설정
+### 최초에 galaxy를 설치하면 내부에서만 접속이 가능한 상태로 실행 됩니다.
 
 ![image](https://github.com/user-attachments/assets/1416d4e5-38bd-4872-923e-4d4aff207792)
 
 여기에서 Serving on http://127.0.0.1:8080 이 부분을 외부에서 접속이 가능하도록 0.0.0.0:8080 으로 변경합니다.
-## 1.서비스 종료
+
+## 6.서비스 종료
 control + c 를 이용하여 갤럭시 웹서비스를 종료 합니다.
 
-## 2.config 변경을 위해 디렉토리 이동
+## 7.config 변경을 위해 디렉토리 이동
 ```
 cd /home/rocky/galaxy/config
 ```
 
-## 3.원본 config 파일 복사
+## 8.원본 config 파일 복사
 ```
 cp galaxy.yml.sample galaxy.yml
 ```
 
-## 4.galaxy.yml 파일 수정
+## 9.galaxy.yml 파일 수정
 ```
 sed -i '92s/localhost/0.0.0.0/g' galaxy.yml
 ```
@@ -1542,22 +1536,22 @@ sed -i '92s/#/ /g' galaxy.yml
 ![image](https://github.com/user-attachments/assets/61b32fe5-85cb-4573-b908-7a847a9a929a)
 
 
-## 5.galaxy.yml 파일 저장
+## 10.galaxy.yml 파일 저장
 gunicorn : 웹 서버로 부터 받은 요청을 웹 어플리케이션에 전달해 주는 역할을 함.
 
 웹서버의 설정을 나자신에서 모든 서버의 요청을 받을 수 있도록 변경하는 작업임.
 
-## 6.실행 디렉토리로 이동
+## 11.실행 디렉토리로 이동
 ```
 cd ..
 ```
 
-## 7.galaxy 다시 실행
+## 12.galaxy 다시 실행
 ```
 sh run.sh
 ```
 
-## 8. 0.0.0.0:8080 으로 서비스가 실행 되었는지 확인
+## 13. 0.0.0.0:8080 으로 서비스가 실행 되었는지 확인
 ```
 sudo netstat -nltp
 ```
@@ -1565,7 +1559,7 @@ sudo netstat -nltp
 ![image](https://github.com/user-attachments/assets/66ac0e5b-57d9-4c94-a940-fc0a9cd1656e)
 
 
-## 9.브라우저 접속 URL에 자신의 서버공인 IP를 입력 후 8080포트로 접속 확인
+## 14. 브라우저 접속 URL에 자신의 서버공인 IP를 입력 후 8080포트로 접속 확인
 크롬등의 브라우저 창을 열고 주소란에 입력 http://210.109.54.95:8080
 
 ![image](https://github.com/user-attachments/assets/0e6c827a-337d-4432-bdc4-b01ea62e8490)
