@@ -1372,7 +1372,7 @@ cd
 
 
 
-# ◼︎ icav2-cli-plugins 설치
+# ◼︎ icav2 설치
 
 ## 1. yq 설치
 ```
@@ -1451,6 +1451,8 @@ icav2
 
 ![image](https://github.com/user-attachments/assets/c6827969-0538-4651-9067-a36b91519e1a)
 
+
+https://help.ica.illumina.com/command-line-interface/cli-indexcommands
 
 <br>
 <br>
