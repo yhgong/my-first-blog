@@ -91,6 +91,8 @@
 <br>
 <br>
 
+# ◼︎ pem 파일 다운로드
+https://objectstorage.kr-central-2.kakaocloud.com/v1/203ec4b6c61148ec9b1a1576e00c0aae/linkvalue/bioinfo.pem
 
 # ◼︎ 주피터랩 설치 및 conda GATK 연동
 
