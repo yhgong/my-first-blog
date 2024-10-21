@@ -1549,7 +1549,7 @@ sed -i '92s/#/ /g' galaxy.yml
 
 
 ## 10.galaxy.yml 파일 저장
-gunicorn : 웹 서버로 부터 받은 요청을 웹 어플리케이션에 전달해 주는 역할을 함.
+gunicorn : 웹 서버로 부터 받은 요청을 웹 어플리케이션에 전달해 주는 역할을 함.
 
 웹서버의 설정을 나자신에서 모든 서버의 요청을 받을 수 있도록 변경하는 작업임.
 
@@ -1595,7 +1595,7 @@ sudo dnf -y install wget unzip
 sudo dnf -y install java-17-openjdk-devel
 ```
 
-## 3. GATJ 설치 파일 다운로드
+## 3. GATK 설치 파일 다운로드
 ```
 wget https://github.com/broadinstitute/gatk/releases/download/4.6.0.0/gatk-4.6.0.0.zip
 ```
