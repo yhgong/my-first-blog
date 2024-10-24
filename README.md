@@ -189,7 +189,7 @@ sudo dnf -y update
 ## 2. System Extension Install
 ### wget, git-lfs net-tools traceroute 설치
 ```
-sudo dnf -y install wget git-lfs net-tools traceroute
+sudo dnf -y install wget git-lfs net-tools traceroute curl
 ```
 <br>
 
